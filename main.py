@@ -10,6 +10,8 @@ app = FastAPI()
 origins = [
     "https://tool.sddoc.in",
     "http://localhost:3000",
+    "http://68.183.81.248",
+    "http://68.183.81.248/",
     "http://localhost:3000/",
 ]
 

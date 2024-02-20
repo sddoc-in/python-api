@@ -12,6 +12,8 @@ origins = [
     "http://localhost:3000",
     "http://68.183.81.248",
     "http://68.183.81.248/",
+    "http://62.72.0.214/",
+    "http://62.72.0.214",
     "http://localhost:3000/",
 ]
 
@@ -22,11 +24,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-host = 'roundhouse.proxy.rlwy.net'
+# host = 'roundhouse.proxy.rlwy.net'
+# database = 'u958929721_tools'
+# user = 'root'
+# password = 'gcC4cgchGCghg3-611256A5eED-ed-g5'
+# port = 14636
+host = '193.203.166.103'
 database = 'u958929721_tools'
-user = 'root'
-password = 'gcC4cgchGCghg3-611256A5eED-ed-g5'
-port = 14636
+user = 'u958929721_deftadm'
+password = 'Pr0h1b1t3d$'
+port = 3306
 
 async def get_connection():
     return create_engine(

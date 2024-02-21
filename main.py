@@ -19,7 +19,7 @@ origins = [
     "https://xdba.io",
     "http://localhost:3000/",
 ]
-
+app.add_middleware(HTTPSRedirectMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

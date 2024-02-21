@@ -80,4 +80,4 @@ async def get_feature_endpoint(platform_id: int = Query(...)):
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host='0.0.0.0', port=8000)
+    uvicorn.run(app, host='0.0.0.0', port=8000, ssl_keyfile="/tmp/certs/test.pem", ssl_certfile="/tmp/certs/xdba_certificate.pem")

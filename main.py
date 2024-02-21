@@ -9,12 +9,12 @@ import json
 app = FastAPI()
 origins = [
     "http://localhost:3000",
-    "http://68.183.81.248",
-    "http://68.183.81.248/",
     "http://62.72.0.214:3001/",
     "http://62.72.0.214:3001",
     "http://kako.xdba.io:3001/",
     "http://kako.xdba.io:3001",
+    "https://kako.xdba.io:3001/",
+    "https://kako.xdba.io:3001",
     "https://xdba.io/",
     "https://xdba.io",
     "http://localhost:3000/",

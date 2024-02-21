@@ -5,6 +5,7 @@ from fastapi import FastAPI, Query
 from fastapi.responses import HTMLResponse  
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 import json
 app = FastAPI()
 origins = [

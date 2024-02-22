@@ -10,6 +10,10 @@ import json
 app = FastAPI()
 origins = [
     "http://localhost:3000",
+    "http://68.183.81.248/",
+    "http://68.183.81.248",
+    "https://deft.sddoc.in/",
+    "https://deft.sddoc.in",
     "http://62.72.0.214:3001/",
     "http://62.72.0.214:3001",
     "http://kako.xdba.io:3001/",
@@ -28,16 +32,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# host = 'roundhouse.proxy.rlwy.net'
-# database = 'u958929721_tools'
-# user = 'root'
-# password = 'gcC4cgchGCghg3-611256A5eED-ed-g5'
-# port = 14636
-host = '193.203.166.103'
+host = 'roundhouse.proxy.rlwy.net'
 database = 'u958929721_tools'
-user = 'u958929721_admin'
-password = 'Pr0h1b1t3d'
-port = 3306
+user = 'root'
+password = 'gcC4cgchGCghg3-611256A5eED-ed-g5'
+port = 14636
+# host = '193.203.166.103'
+# database = 'u958929721_tools'
+# user = 'u958929721_admin'
+# password = 'Pr0h1b1t3d'
+# port = 3306
 
 async def get_connection():
     return create_engine(
@@ -81,4 +85,4 @@ async def get_feature_endpoint(platform_id: int = Query(...)):
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host='0.0.0.0', port=8000, ssl_keyfile="/tmp/certs/test.pem", ssl_certfile="/tmp/certs/xdba_certificate.pem")
+    uvicorn.run(app, host='0.0.0.0', port=8000)

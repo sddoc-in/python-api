@@ -5,7 +5,7 @@ from fastapi import FastAPI, Query
 from fastapi.responses import HTMLResponse  
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
+
 import json
 app = FastAPI()
 origins = [
@@ -24,7 +24,8 @@ origins = [
     "https://xdba.io",
     "http://localhost:3000/",
 ]
-app.add_middleware(HTTPSRedirectMiddleware)
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,

@@ -36,7 +36,7 @@ app.add_middleware(
 host = '193.203.166.103'
 database = 'u958929721_tools'
 user = 'u958929721_admin'
-password = 'Pr0h1b1t3d'
+password = 'Play4keeps$'
 port = 3306
 
 async def get_connection():

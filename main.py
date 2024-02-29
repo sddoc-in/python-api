@@ -9,6 +9,8 @@ from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 import json
 app = FastAPI()
 origins = [
+    "https://comparing-page.vercel.app/",
+    "https://comparing-page.vercel.app",
     "http://localhost:3000",
     "http://62.72.0.214:3001/",
     "http://62.72.0.214:3001",

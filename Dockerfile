@@ -11,9 +11,9 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Copy SSL certificates to the container
-COPY ./tmp/certs/xdba_certificate.pem
+COPY ./tmp/certs/xdba_certificate.pem  /app/certs
 
-COPY ./tmp/certs/test.pem
+COPY ./tmp/certs/test.pem  /app/key
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
@@ -22,4 +22,4 @@ EXPOSE 8000
 ENV NAME World
 
 # Run app.py when the container launches with SSL support
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--ssl-keyfile", "./tmp/certs/test.pem", "--ssl-certfile", "./tmp/certs/xdba_certificate.pem"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--ssl-keyfile", "/app/key/test.pem", "--ssl-certfile", "/app/certs/xdba_certificate.pem"]

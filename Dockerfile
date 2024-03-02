@@ -11,7 +11,6 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Copy SSL certificates to the container
-sl_keyfile="/tmp/certs/test.pem"
 COPY ./tmp/certs/xdba_certificate.pem
 
 COPY ./tmp/certs/test.pem

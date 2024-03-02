@@ -10,13 +10,14 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
+# Copy SSL certificates to the container
+COPY ./path/to/your/certificates /app/certs
+
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
 
 # Define environment variable
 ENV NAME World
 
-# Run app.py when the container launches
-# CMD ["gunicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
-# CMD ["uvicorn", "--bind", "0.0.0.0:8000", "main:app"]
+# Run app.py when the container launches with SSL support
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload", "--ssl-keyfile", "/app/certs/your_key.pem", "--ssl-certfile", "/app/certs/your_cert.pem"]

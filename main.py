@@ -11,6 +11,8 @@ app = FastAPI()
 origins = [
     "https://comparing-page.vercel.app/",
     "https://comparing-page.vercel.app",
+    "https://deft-fzsp.vercel.app/",
+    "https://deft-fzsp.vercel.app",
     "http://localhost:3000",
     "http://62.72.0.214:3001/",
     "http://62.72.0.214:3001",

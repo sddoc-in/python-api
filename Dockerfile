@@ -14,8 +14,9 @@ RUN pip install -r requirements.txt
 RUN mkdir -p /app/certs /app/key
 
 # Copy SSL certificates to the container
-COPY ./tmp/certs/xdba_certificate.pem /app/certs/
-COPY ./tmp/certs/test.pem /app/key/
+COPY certs/xdba_certificate.pem /app/certs/
+COPY certs/test.pem /app/key/
+
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
